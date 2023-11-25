@@ -1,25 +1,30 @@
 let array = ['Antonia', 'Nuru', 'Amari', 'Mo'];
 
-const myFunction = returnFirstTwoDrivers = () => {
-     return array.slice(0,2);
-     
-};
+function returnFirstTwoDrivers(array) {
+    return array.slice(0, 2);
+}
 
-const firstTwoDrivers = returnFirstTwoDrivers();
-console.log(firstTwoDrivers);
+console.log(returnFirstTwoDrivers(array)); 
+
+function returnLastTwoDrivers(array) {
+    return array.slice(-2);
+}
+console.log(returnLastTwoDrivers(array)); 
 
 
+// selecting drivers 
+function returnFirstTwoDrivers(array) {
+    return array.slice(0, 2);
+}
 
-const myFunction2 = returnLastTwoDrivers = () => {
-     return array.slice(2,4);
-     
-};
-
-const lastTwoDrivers = returnLastTwoDrivers();
-console.log(lastTwoDrivers);
+function returnLastTwoDrivers(array) {
+    return array.slice(-2);
+}
 
 const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
-console.log("Selecting drivers:", selectingDrivers);
+console.log(selectingDrivers[0](array)); // Output: ['John', 'Jane']
+console.log(selectingDrivers[1](array));
+
 
 function createFareMultiplier(x) {
     return function () {
